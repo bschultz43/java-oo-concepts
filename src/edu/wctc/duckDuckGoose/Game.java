@@ -2,7 +2,7 @@ package edu.wctc.duckDuckGoose;
 
 import java.util.Random;
 
-public class Game {
+public class Game implements Playable {
     private StandingStudent it;
     private SittingStudent duck;
 
