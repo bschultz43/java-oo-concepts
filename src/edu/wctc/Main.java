@@ -1,20 +1,18 @@
 package edu.wctc;
 
-import edu.wctc.coffee.CoffeeType;
-import edu.wctc.coffee.Flavor;
-import edu.wctc.coffee.Keurig;
-import edu.wctc.duckDuckGoose.Game;
+import edu.wctc.coffee.*;
+import edu.wctc.duckDuckGoose.*;
 
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
-//        Keurig myCoffeeMachine = new Keurig();
-//        System.out.println(myCoffeeMachine.showInventory());
-//        System.out.println(myCoffeeMachine.brew(Flavor.MOCHA, CoffeeType.REGULAR));
-//        System.out.println(myCoffeeMachine.showInventory());
+        coffeeDemo();
+        playDuckDuckGoose();
+    }
 
+    public static void playDuckDuckGoose() {
         Scanner keyboard = new Scanner(System.in);
         Game ddg = new Game();
         boolean done = false;
@@ -28,5 +26,12 @@ public class Main {
             if(input.trim().equalsIgnoreCase("n"))
                 done = true;
         } while(!done);
+    }
+
+    public static void coffeeDemo() {
+        Keurig myCoffeeMachine = new Keurig();
+        System.out.println(myCoffeeMachine.showInventory());
+        System.out.println(myCoffeeMachine.brew(Flavor.MOCHA, CoffeeType.REGULAR));
+        System.out.println(myCoffeeMachine.showInventory());
     }
 }
