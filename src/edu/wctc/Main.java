@@ -8,7 +8,6 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        coffeeDemo();
         playDuckDuckGoose();
     }
 
@@ -28,7 +27,7 @@ public class Main {
         } while(!done);
     }
 
-    public static void coffeeDemo() {
+    public static void brewCoffee() {
         Keurig myCoffeeMachine = new Keurig();
         System.out.println(myCoffeeMachine.showInventory());
         System.out.println(myCoffeeMachine.brew(Flavor.MOCHA, CoffeeType.REGULAR));
